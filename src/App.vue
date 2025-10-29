@@ -32,7 +32,7 @@ const handleDelete =(id) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-teal-700 to-purple-700 p-4 sm:p-6 lg:p-8">
+  <div class="min-h-screen bg-gradient-to-br from-teal-700 to-cyan-400 p-4 sm:p-6 lg:p-8">
     <div class=" max-w-sm sm:max-w-md lg:max-w-2xl mx-auto my-10">
       <h1 class="text-xl lg:text-5xl text-white font-bold text-center mb-5 mt-1.5">MY TO DO LIST</h1>
     

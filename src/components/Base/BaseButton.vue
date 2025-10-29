@@ -31,7 +31,7 @@ const props = defineProps({
 
 const variantClass = {
     primary: 'bg-slate-700 text-white',
-    secondary: 'bg-gray-500 text-gray-500'
+    secondary: 'bg-cyan-600 text-white'
 }
 
 const outlineClass = {

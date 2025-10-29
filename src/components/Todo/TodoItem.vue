@@ -8,7 +8,6 @@
             <BaseButton
                 label="Delete"
                 variant="secondary"
-                outline
                 @click="OnDelete"
             />
         </div>
