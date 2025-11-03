@@ -1,6 +1,6 @@
 <template>
     <input 
-        :model-value="modelValue"
+        :value="modelValue"
         :type="type"
         :placeholder="placeholder"
         class="flex-1 px-4 py-3 bg-white rounded-xl outline-none w-full border 

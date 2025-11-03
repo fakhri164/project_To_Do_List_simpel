@@ -5,6 +5,7 @@
             :key="todo.id"
             :todo="todo"
             @delete="$emit('delete', todo.id)"
+            @save="$emit('save', todo.id, $event)"
         />
     </div>
 </template>
@@ -16,6 +17,6 @@ defineProps({
 })
 
 
-const emit = defineEmits('delete', 'edit')
+const emit = defineEmits('delete', 'edit', 'save')
 
 </script>

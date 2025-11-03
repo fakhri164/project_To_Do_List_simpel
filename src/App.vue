@@ -6,6 +6,8 @@ import TodoList from './components/Todo/TodoList.vue';
 
 const newTodo= ref()
 const todos = reactive([])
+const editingId = ref (null)
+const editText = ref('')
 
 let nextId =1
 
@@ -18,6 +20,7 @@ const handleAdd = () => {
     })
 
     newTodo.value = ''
+    console.log('newTodo after reset:', newTodo.value)
   }
 }
 
@@ -26,8 +29,20 @@ const handleDelete =(id) => {
   if(index > -1) todos.splice(index, 1)
 }
 
+const handleEdit =(id) => {
+  const todo = todos.find(todo => todo.id === id)
+  editingId.value = id
+  editText.value = todo.text
+}
 
-
+const handleSaveEdit = (id, newText) => {
+  const index = todos.findIndex(todo => todo.id === id)
+  if(index > -1) {
+    todos[index].text = newText
+  }
+  editingId.value = null
+  editText.value = ''
+}
 
 </script>
 
@@ -56,6 +71,8 @@ const handleDelete =(id) => {
       <TodoList
         :todos="todos"
         @delete="handleDelete"
+        @edit="handleEdit"
+        @save="handleSaveEdit"
       />
     </div>
     </div>
